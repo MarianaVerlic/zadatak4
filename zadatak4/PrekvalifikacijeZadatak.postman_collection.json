@@ -1,0 +1,296 @@
+{
+	"info": {
+		"_postman_id": "cecf205b-7b8f-4df8-907d-03d8ca02facc",
+		"name": "PrekvalifikacijeZadatak",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Logovanje",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"user\",\n    \"password\": \"user\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3081/app/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3081",
+					"path": [
+						"app",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registrovanje novog korisnika",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"test\",\n    \"password\": \"test\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3081/app/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3081",
+					"path": [
+						"app",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Provera da li korisničko ime postoji",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3081/app/checkUsername/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3081",
+					"path": [
+						"app",
+						"checkUsername",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Preuzimanje detalja knjige po IDju",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3081/app/book/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3081",
+					"path": [
+						"app",
+						"book",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Preuzimanje jedne stranice svih knjiga",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3081/app/books/1/7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3081",
+					"path": [
+						"app",
+						"books",
+						"1",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pretraga knjiga sa stranicama po svim obeležijima. ",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3081/app/books/search/Kotlin/1/20",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3081",
+					"path": [
+						"app",
+						"books",
+						"search",
+						"Kotlin",
+						"1",
+						"20"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pretraga knjiga sa stranicama po autoru",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3081/app/books/searchByAuthor/Launa/1/20",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3081",
+					"path": [
+						"app",
+						"books",
+						"searchByAuthor",
+						"Launa",
+						"1",
+						"20"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Dodavanje nove knjige",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"authors\": [\n        \"Launa Lorente\",\n        \"Christel Phelan\"\n    ],\n    \"publishDate\": \"1925-3-16\",\n    \"rating\": 1.4345917048271684,\n    \"genre\": \"Science Fiction\",\n    \"title\": \"The Trials of Betelgeuse\",\n    \"isbn\": \"699759184770\", \n    \"available\": true,\n    \"pages\": 301\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3081/app/books/new",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3081",
+					"path": [
+						"app",
+						"books",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Izmena knjige po ID-ju",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 511,\n    \"authors\": [\n        \"Launa Lorente\",\n        \"Christel Phelan\"\n    ],\n    \"publishDate\": \"1925-3-16\",\n    \"rating\": 1.4345917048271684,\n    \"genre\": \"Science Fiction\",\n    \"title\": \"The Trials of Betelgeuse\",\n    \"isbn\": \"699759184770\", \n    \"available\": true,\n    \"pages\": 301\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3081/app/books/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3081",
+					"path": [
+						"app",
+						"books",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Brisanja knjige po ID-ju",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3081/app/books/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3081",
+					"path": [
+						"app",
+						"books",
+						"5"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiJ9.eyJ1cm46YnJhaW5zMjAyMTphZG1pbiI6ZmFsc2UsImlhdCI6MTYzNDE3MzI1NCwiaXNzIjoidXJuOmJyYWluczIwMjE6c2VydmVyIiwiYXVkIjoidXJuOmJyYWluczIwMjE6c2VydmVyIiwiZXhwIjoxNjk3Mjg4NDU0fQ.XA4hJL2B8nrMUUPJPzZz8jy0jnfyscGvTxhPPYcKXo0",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

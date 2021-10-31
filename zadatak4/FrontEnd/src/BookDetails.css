@@ -1,0 +1,46 @@
+.formContent{
+    max-width: 60vw;
+    padding: 20px;
+    border: 2px #a1c2ff solid;
+    border-radius: 40px;
+    margin: 10px;
+}
+.card {
+    border: 1px solid darkgray;
+    margin: 4px;
+    width: 5cm;
+    height: 5cm;
+    background-color:whitesmoke;
+    box-shadow:3px 3px 3px gray;
+    
+  }
+  
+  .bottom {
+    display: flexbox;
+    padding: 3px;
+    
+  
+  }
+  
+  .p {
+    text-align: center;
+  }
+  
+
+  
+  .button {
+    padding: 1px;
+    margin-left: 35px;
+    width: 40px;
+    background-color:silver;
+    box-shadow:3px 3px 3px gray;
+  
+  }
+
+  .formContent{
+    max-width: 60vw;
+    padding: 20px;
+    border: 2px #a1c2ff solid;
+    border-radius: 40px;
+    margin: 10px;
+}
