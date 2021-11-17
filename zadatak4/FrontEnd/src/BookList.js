@@ -31,7 +31,7 @@ const BookList = ({list, onDelete}) => {
              {card.title}
            </Typography>
            <Typography color="text.secondary" sx={{textAlign: 'center' }}>
-             {card.authors.join(", ")}
+             {card.authors}
            </Typography>
            <Typography variant = "body2" sx={{textAlign: 'center' }} >
              Published: {card.publishDate}
